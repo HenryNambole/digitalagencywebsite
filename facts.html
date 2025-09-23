@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TITI Digital Agency Digital Marketing & Web Solutions</title>
+    <title>TITI Digital Agency - Digital Marketing & Web Solutions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="TITI Digital Agency" name="keywords">
     <meta content="TITI Digital Agency - SEO, Web Design, Social Media Marketing, Email Marketing, App Development" name="description">
@@ -77,6 +77,45 @@
             padding: 0.25rem 0 !important;
             color: inherit !important; /* use surrounding text color (keeps contrast on dark footer) */
             box-shadow: none !important;
+        }
+
+        /* Modern facts/cards style */
+       .facts-modern {
+           background: linear-gradient(180deg, rgba(9,30,62,0.02), rgba(9,30,62,0.03));
+           padding: 60px 0;
+       }
+       .facts-grid { display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center; align-items:stretch; }
+       .fact-card {
+           flex: 1 1 280px;
+           max-width: 360px;
+           background: rgba(255,255,255,0.03);
+           border: 1px solid rgba(255,255,255,0.04);
+           border-radius: 14px;
+           padding: 28px;
+           display:flex;
+           gap:18px;
+           align-items:center;
+           box-shadow: 0 8px 30px rgba(6,20,41,0.12);
+           transition: transform .28s ease, box-shadow .28s ease;
+           backdrop-filter: blur(6px);
+        }
+        .fact-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(6,20,41,0.18); }
+        .fact-icon {
+            width:72px; height:72px; border-radius:12px;
+            display:flex; align-items:center; justify-content:center; flex-shrink:0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,255,255,0.03);
+            font-size:28px; color:#fff;
+        }
+        .fact-icon .fa { font-size:28px }
+        .fact-content h3 { margin:0; font-size:28px; line-height:1; font-weight:700; color:#0d6efd; }
+        .fact-content p { margin:6px 0 0; color:rgba(0,0,0,0.65); }
+        /* counters */
+        .fact-count { font-weight:800; font-size:28px; color:#061429; display:block; margin-top:0.12rem; }
+        /* light/dark adjustments for footer-like backgrounds */
+        @media (prefers-color-scheme: dark) {
+            .fact-card { background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.03); color: #e6eef8; }
+            .fact-content p { color: rgba(230,238,248,0.8); }
         }
     </style>
 
@@ -201,40 +240,53 @@
     <!-- Full Screen Search End -->
 
     <!-- Facts Start -->
-    <div class="container-fluid facts py-5 pt-lg-0">
-        <div class="container py-5 pt-lg-0">
-            <div class="row gx-0">
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
-                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-users text-primary"></i>
+    <div class="container-fluid facts-modern">
+        <div class="container">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8 mx-auto text-center">
+                    <h5 class="fw-bold text-primary text-uppercase">Our Impact</h5>
+                    <h2 class="mb-0">Real results, measured for growth</h2>
+                    <p class="text-muted mt-2">We focus on measurable outcomes from traffic and conversions to long term value.</p>
+               </div>
+            </div>
+
+            <div class="facts-grid mx-auto">
+                <div class="fact-card">
+                    <div class="fact-icon" style="background:linear-gradient(135deg,#0d6efd,#4ea8ff);">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <div class="fact-content">
+                       <div class="d-flex align-items-end gap-2">
+                            <h3 class="fact-count" data-target="45">0</h3>
+                            <small class="text-muted">Clients</small>
                         </div>
-                        <div class="ps-4">
-                            <h5 class="text-white mb-0">Satisfied Clients</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">45</h1>
-                        </div>
+                        <p class="small mb-0">Long-term relationships built on results and transparency.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-chart-line text-white"></i>
+
+                <div class="fact-card">
+                    <div class="fact-icon" style="background:linear-gradient(135deg,#00c29a,#00e6b8);">
+                        <i class="fa fa-chart-line"></i>
+                    </div>
+                    <div class="fact-content">
+                        <div class="d-flex align-items-end gap-2">
+                            <h3 class="fact-count" data-target="120">0</h3>
+                            <small class="text-muted">Campaigns</small>
                         </div>
-                        <div class="ps-4">
-                            <h5 class="text-primary mb-0">Campaigns Launched</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">120</h1>
-                        </div>
+                        <p class="small mb-0">Performance-first campaigns with clear ROI and reporting.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-award text-primary"></i>
+
+                <div class="fact-card">
+                    <div class="fact-icon" style="background:linear-gradient(135deg,#ffc857,#ff8a4b);">
+                        <i class="fa fa-award"></i>
+                    </div>
+                    <div class="fact-content">
+                        <div class="d-flex align-items-end gap-2">
+                            <h3 class="fact-count" data-target="5">0</h3>
+                            <small class="text-muted">Awards</small>
                         </div>
-                        <div class="ps-4">
-                            <h5 class="text-white mb-0">Awards & Recognition</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">5</h1>
-                        </div>
+                        <p class="small mb-0">Recognition for design and marketing excellence.</p>
                     </div>
                 </div>
             </div>
@@ -1271,6 +1323,36 @@
                 }
             });
         })();
+
+        // simple counter animation — triggers when in view
+        (function () {
+            var counters = document.querySelectorAll('.fact-count');
+            if (!counters.length) return;
+            function animateCounter(el) {
+                var target = +el.getAttribute('data-target') || 0;
+                var current = 0;
+                var duration = 1200;
+                var start = null;
+                function step(ts) {
+                    if (!start) start = ts;
+                    var progress = Math.min((ts - start) / duration, 1);
+                    el.textContent = Math.floor(progress * target);
+                    if (progress < 1) requestAnimationFrame(step);
+                    else el.textContent = target;
+                }
+                requestAnimationFrame(step);
+            }
+            var io = new IntersectionObserver(function(entries, obs){
+                entries.forEach(function(entry){
+                    if(entry.isIntersecting){
+                        var el = entry.target;
+                        animateCounter(el);
+                        obs.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.4 });
+            counters.forEach(function(c){ io.observe(c); });
+        })();
     </script>
 
     <!-- Cookie banner (bottom) -->
@@ -1368,7 +1450,7 @@
         })();
     </script>
 
-
 </body>
 
 </html>
+
